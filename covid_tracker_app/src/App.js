@@ -3,20 +3,22 @@ import Chart from './components/Chart';
 import CountryPicker from './components/CountryPicker';
 import './styles/App.css';
 import { fetchData } from './helpers/apiHelpers';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const App = () => {
+  const [data, setData] = useState([]);
+  const [country, setCountry] = useState('');
 
   useEffect(() => {
     (async () => {
-      const data = await fetchData();;
-      console.log(data);
+      const fetchedData = await fetchData();;
+      setData(fetchedData);
   })();
   }, []);
 
   return (
     <div className="container">
-      <Cards/>
+      <Cards data={data}/>
       <CountryPicker/>
       <Chart/>
     </div>
