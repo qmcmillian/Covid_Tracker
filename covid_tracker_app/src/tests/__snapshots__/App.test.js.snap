@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CountryPicker should render my component 1`] = `
+<WithStyles(ForwardRef(FormControl))
+  className="formControl"
+>
+  <WithStyles(ForwardRef(NativeSelect))
+    defaultValue=""
+    onChange={[Function]}
+  >
+    <option
+      value=""
+    >
+      Global
+    </option>
+  </WithStyles(ForwardRef(NativeSelect))>
+</WithStyles(ForwardRef(FormControl))>
+`;

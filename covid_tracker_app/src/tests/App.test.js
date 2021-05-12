@@ -7,5 +7,6 @@ import CountryPicker from '../components/CountryPicker';
 describe('CountryPicker', () => {
   it("should render my component", () => {
     const wrapper = shallow(<CountryPicker/>);
+    expect(wrapper).toMatchSnapshot();
   });
 });
